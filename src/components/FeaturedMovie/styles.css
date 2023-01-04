@@ -91,3 +91,32 @@
   font-size: 1.8rem;
   color: #999999;
 }
+
+@media (max-width: 760px) {
+  .featured {
+    height: 90vh;
+  }
+
+  .featured--name {
+    font-size: 4rem;
+  }
+
+  .featured--info {
+    font-size: 1.6rem;
+  }
+
+  .featured--description {
+    font-size: 1.4rem;
+    max-width: 100%;
+    padding-right: 3rem;
+  }
+
+  .featured--my-list-button,
+  .featured--watch-button {
+    font-size: 1.6rem;
+  }
+
+  .featured--genres {
+    font-size: 1.4rem;
+  }
+}

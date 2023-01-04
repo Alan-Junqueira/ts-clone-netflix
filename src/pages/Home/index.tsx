@@ -9,10 +9,12 @@ import { Categorie } from '../../types/categorie';
 import { Info } from '../../types/info';
 import { Result } from '../../types/result';
 
+import netflixLoading from '../../assets/Netflix_LoadTime.gif';
+
 import './styles.css';
 
 export const Home = () => {
-  const [moveList, setMoveList] = useState<Categorie[]>([]);
+  const [movieList, setMovieList] = useState<Categorie[]>([]);
   const [featuredData, setFeaturedData] = useState<Info | null>(null);
   const [blackHeader, setBlackHeader] = useState<boolean>(false);
 
@@ -20,7 +22,7 @@ export const Home = () => {
     const loadAll = async () => {
       //* Pegando a lista
       let list = await Tmdb.getHomeList();
-      setMoveList(list);
+      setMovieList(list);
 
       //* Pegando o filme em destaque (featured)
       let originals = list.filter((i) => i.slug === 'originals');
@@ -60,11 +62,16 @@ export const Home = () => {
       )}
 
       <section className="lists">
-        {moveList.map((item, key) => (
+        {movieList.map((item, key) => (
           <MovieRow key={key} title={item.title} itens={item.itens} />
         ))}
       </section>
       <Footer />
+      {movieList.length <= 0 && (
+        <div className="loading">
+          <img src={netflixLoading} alt="Carregando" />
+        </div>
+      )}
     </>
   );
 };
