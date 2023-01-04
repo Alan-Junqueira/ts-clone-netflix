@@ -1,0 +1,35 @@
+.movieRow {
+  margin-bottom: 3rem;
+}
+
+.movieRow h2 {
+  margin-left: 3rem;
+}
+
+.movieRow--listArea {
+  overflow-x: hidden;
+  padding-left: 3rem;
+}
+
+.movieRow--list {
+  width: 99999999999px;
+}
+
+.movieRow--iten {
+  display: inline-block;
+  width: 15rem;
+
+  cursor: pointer;
+}
+
+.movieRow--iten img {
+  width: 100%;
+  height: 22.5rem;
+
+  transform: scale(0.9);
+  transition: all ease 0.3s;
+}
+
+.movieRow--iten img:hover {
+  transform: scale(1);
+}
