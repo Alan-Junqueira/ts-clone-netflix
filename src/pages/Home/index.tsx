@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
-import { FeaturedMovie } from '../components/FeaturedMovie';
-import { MovieRow } from '../components/MovieRow';
+import { FeaturedMovie } from '../../components/FeaturedMovie';
+import { MovieRow } from '../../components/MovieRow';
 
-import Tmdb from '../services/tmdb';
-import { Categorie } from '../types/categorie';
-import { Info } from '../types/info';
-import { Result } from '../types/result';
+import Tmdb from '../../services/tmdb';
+import { Categorie } from '../../types/categorie';
+import { Info } from '../../types/info';
+import { Result } from '../../types/result';
+
+import './styles.css'
 
 export const Home = () => {
   const [moveList, setMoveList] = useState<Categorie[]>([]);
@@ -33,11 +35,6 @@ export const Home = () => {
 
   return (
     <div>
-      <span>Header</span>
-      <span>Destaque</span>
-      <span>Listas</span>
-      <span>Footer</span>
-
       {featuredData !== null && featuredData && (
         <FeaturedMovie iten={featuredData} />
       )}

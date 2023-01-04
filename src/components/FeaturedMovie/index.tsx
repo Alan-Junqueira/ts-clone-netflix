@@ -39,12 +39,15 @@ export const FeaturedMovie = ({ iten }: IFeaturedMovie) => {
               : '    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam incidunt veritatis obcaecati accusantium commodi optio, ipsum illum, temporibus repellendus, sint magnam! Cumque rerum quasi vero perferendis at, placeat distinctio nostrum.'}
           </p>
           <div className="featured--buttons">
-            <button>
-              <a href={`/watch/${iten.id}`}>▶ Assistir</a>
-            </button>
-            <button>
-              <a href={`/list/add/${iten.id}`}>+ Minha Lista</a>
-            </button>
+            <a className="featured--watch-button" href={`/watch/${iten.id}`}>
+              ▶ Assistir
+            </a>
+            <a
+              className="featured--my-list-button"
+              href={`/list/add/${iten.id}`}
+            >
+              + Minha Lista
+            </a>
           </div>
           <div className="featured--genres">
             <strong>Gêneros: </strong>
