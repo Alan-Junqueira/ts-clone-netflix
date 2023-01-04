@@ -1,0 +1,42 @@
+.featured {
+  height: 100vh;
+}
+
+.featured--vertical {
+  width: inherit;
+  height: inherit;
+  background-image: linear-gradient(to top, #111111 10%, transparent 90%);
+}
+
+.featured--horizontal {
+  width: inherit;
+  height: inherit;
+  background-image: linear-gradient(to right, #111111 30%, transparent 70%);
+}
+
+.featured--name {
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.featured--info {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+
+.featured--points {
+  display: inline-block;
+  color: #46D369;
+  margin-right: 1.5rem;
+}
+
+.featured--year {
+  display: inline-block;
+  margin-right: 1.5rem;
+}
+
+.featured--seasons {
+  display: inline-block;
+  
+}

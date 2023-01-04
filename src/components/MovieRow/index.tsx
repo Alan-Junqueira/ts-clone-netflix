@@ -1,4 +1,4 @@
-import { Result } from '../../types/results';
+import { Result } from '../../types/result';
 import './styles.css';
 
 interface IMovieRow {
@@ -13,7 +13,7 @@ interface IMovieRow {
 
 export const MovieRow = ({ title, itens }: IMovieRow) => {
   return (
-    <div className='movieRow'>
+    <div className="movieRow">
       <h2>{title}</h2>
       <div className="movieRow--listArea">
         <div className="movieRow--list">

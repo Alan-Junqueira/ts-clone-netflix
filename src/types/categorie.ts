@@ -1,4 +1,4 @@
-import { Result } from "./results";
+import { Result } from "./result";
 
 export type Categorie = {
   slug: string;
